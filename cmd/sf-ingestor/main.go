@@ -23,6 +23,7 @@ func main() {
 		log.Fatalf("Error initializing logger: %v", err)
 	}
 	defer appLogger.Close()
+
 	appLogger.Info().Msg("Logger initialized successfully")
 	appLogger.Info().Msg("Starting sf-ingestor service...")
 	appLogger.Info().Msgf("Alpaca Base URL: %s", cfg.Alpaca.BaseURL)

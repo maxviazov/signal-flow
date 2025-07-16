@@ -1,7 +1,7 @@
 alpaca:
-  base_url: "https://paper-api.alpaca.markets"
-  api_key: "your_api_key_here"
-  api_secret: "your_api_secret_here"
+  base_url: "https://paper-api.alpaca.markets/v2"
+  api_key: "PKXBKCK7IKLM8NU23667"
+  api_secret: "dtGgDo6TwcGaBhQvrcA7rTeJ3qMiieZKXhp9FaVs"
 
 log:
   level_console: "info"

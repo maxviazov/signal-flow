@@ -22,7 +22,11 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error initializing logger: %v", err)
 	}
-	defer appLogger.Close()
+	defer func() {
+		if err := appLogger.Close(); err != nil {
+			log.Printf("Error closing logger: %v", err)
+		}
+	}()
 
 	appLogger.Info().Msg("Logger initialized successfully")
 	appLogger.Info().Msg("Starting sf-ingestor service...")

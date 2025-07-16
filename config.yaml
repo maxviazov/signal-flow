@@ -1,0 +1,8 @@
+alpaca:
+  base_url: "https://paper-api.alpaca.markets"
+  api_key: "your_api_key_here"
+  api_secret: "your_api_secret_here"
+
+log:
+  level_console: "info"
+  level_file: "debug"

@@ -8,11 +8,18 @@ import (
 	"strings"
 )
 
+type LogConfig struct {
+	LevelConsole string `mapstructure:"level_console" validate:"required,oneof=debug info warn error fatal panic"` // Log level for console output
+	LevelFile    string `mapstructure:"level_file" validate:"required,oneof=debug info warn error fatal panic"` // Log level for file output
+}
+
 // Config represents the main configuration structure for the application.
 // It contains all the necessary configuration sections.
 type Config struct {
 	// Alpaca contains the configuration for Alpaca API integration
 	Alpaca AlpacaConfig `mapstructure:"alpaca"`
+	// Log contains the logging configuration for the application
+	Log    LogConfig    `mapstructure:"log" validate:"required"` // Ensure LogConfig is provided
 }
 
 // AlpacaConfig holds the configuration settings for Alpaca API connection.

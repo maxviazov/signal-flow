@@ -28,3 +28,8 @@
 {"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
 {"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
 {"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Service started successfully"}

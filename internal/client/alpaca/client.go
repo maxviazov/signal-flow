@@ -9,6 +9,9 @@ type Client struct {
 }
 
 func New(cfg *config.AlpacaConfig) *Client {
+	if cfg == nil {
+		panic("config cannot be nil")
+	}
 	return &Client{
 		apiKey:    cfg.APIKey,
 		apiSecret: cfg.APISecret,

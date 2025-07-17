@@ -37,14 +37,18 @@ func NewConfig() (*Config, error) {
 	v := viper.New()
 	validate := validator.New()
 
+	// Set up Viper to read configuration from a file
 	v.SetConfigName("config") // name of config file (without extension)
 	v.SetConfigType("yaml")   // type of the config file (yaml, json, etc.)
-	v.AddConfigPath(".")      // path to look for the config file in
+	v.AddConfigPath(".")
+	v.SetDefault("log.level_console", "info")                              // Default log level for console output
+	v.SetDefault("log.level_file", "info")                                 // Default log level for file output
+	v.SetDefault("alpaca.base_url", "https://paper-api.alpaca.markets/v2") // Default base URL for Alpaca API
 
 	if err := v.ReadInConfig(); err != nil {
 		return nil, fmt.Errorf("error reading config file: %w", err)
 	}
-
+	// Unmarshal the config file into the Config struct
 	var cfg Config
 	if err := v.Unmarshal(&cfg); err != nil {
 		return nil, fmt.Errorf("error unmarshalling config: %w", err)
@@ -53,12 +57,23 @@ func NewConfig() (*Config, error) {
 	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	v.AutomaticEnv() // read in environment variables that match
 
+	// Override config values with environment variables
+	cfg.Alpaca.BaseURL = v.GetString("alpaca.base_url")
+	if cfg.Alpaca.BaseURL == "" {
+		cfg.Alpaca.BaseURL = "https://paper-api.alpaca.markets/v2" // Default to paper trading URL
+	}
+	// Read APIKey and APISecret from environment variables if set
+	_ = v.GetString("alpaca.api_key")
 	cfg.Alpaca.APIKey = v.GetString("alpaca.api_key")
+	_ = v.GetString("alpaca.api_secret")
 	cfg.Alpaca.APISecret = v.GetString("alpaca.api_secret")
 
 	if err := validate.Struct(&cfg); err != nil {
 		return nil, fmt.Errorf("config validation failed: %w", err)
 	}
-
+	// Validate the LogConfig section
+	if err := validate.Struct(&cfg); err != nil {
+		return nil, fmt.Errorf("config validation failed: %w", err)
+	}
 	return &cfg, nil
 }

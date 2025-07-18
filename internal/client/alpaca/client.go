@@ -9,45 +9,51 @@ import (
 type Client struct {
 	cfg    config.AlpacaConfig
 	logger *zerolog.Logger
-	conn   *websocket.Conn // Assuming websocket is used for Alpaca API
+	conn   *websocket.Conn
 }
 
-func New(cfg config.AlpacaConfig, logger *zerolog.Logger) (*Client, error) {
+func New(cfg config.AlpacaConfig, logger *zerolog.Logger) *Client {
 	return &Client{
 		cfg:    cfg,
 		logger: logger,
-	}, nil
+	}
 }
 
+// authRequest defines the structure for the authentication message.
 type authRequest struct {
 	Action string `json:"action"`
-	Key    string `json:"key"`    // API Key
-	Secret string `json:"secret"` // API Secret
+	Key    string `json:"key"`
+	Secret string `json:"secret"`
 }
 
+// Connect establishes a WebSocket connection and authenticates with Alpaca.
 func (c *Client) Connect() error {
-	c.logger.Info().Str("url", c.cfg.StreamURL).Msg("Connecting to Alpaca WebSocket")
+	c.logger.Info().Str("url", c.cfg.StreamURL).Msg("Connecting to Alpaca WebSocket...")
+
+	// Establish the connection
 	conn, _, err := websocket.DefaultDialer.Dial(c.cfg.StreamURL, nil)
 	if err != nil {
-		c.logger.Error().Err(err).Msg("Failed to connect to Alpaca WebSocket")
+		c.logger.Error().Err(err).Msg("Failed to establish WebSocket connection")
 		return err
 	}
 	c.conn = conn
+	c.logger.Info().Msg("WebSocket connection established")
 
+	// Prepare and send the authentication message
 	authMsg := authRequest{
-		Action: c.cfg.Action,
+		Action: "auth", // Use the constant "auth" for the action
 		Key:    c.cfg.APIKey,
 		Secret: c.cfg.APISecret,
 	}
-	// Send authentication message
-	c.logger.Info().Msg("Connected to Alpaca WebSocket")
+
+	c.logger.Info().Msg("Sending authentication request...")
 	err = c.conn.WriteJSON(authMsg)
 	if err != nil {
-		c.logger.Error().Err(err).Msg("Failed to connect to Alpaca WebSocket")
-		c.conn.Close()
-		c.logger.Info().Msg("Disconnected from Alpaca WebSocket")
+		c.logger.Error().Err(err).Msg("Failed to send authentication message")
+		_ = c.conn.Close() // Attempt to close the connection
 		return err
 	}
-	c.logger.Info().Msg("Authentication message sent to Alpaca WebSocket")
+
+	c.logger.Info().Msg("Successfully authenticated with Alpaca")
 	return nil
 }

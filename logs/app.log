@@ -69,3 +69,13 @@
 {"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
 {"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
 {"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T17:07:01+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"Sending authentication request..."}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"Connected to Alpaca WebSocket successfully"}

@@ -26,8 +26,7 @@ type Config struct {
 // It includes authentication credentials and endpoint information.
 type AlpacaConfig struct {
 	// APIKey is the API key for authenticating with Alpaca API
-	Action string `mapstructure:"action" validate:"required,oneof=buy sell"` // Ensure Action is provided and valid
-	APIKey string `mapstructure:"api_key" validate:"required"`               // Ensure APIKey is provided
+	APIKey string `mapstructure:"api_key" validate:"required"` // Ensure APIKey is provided
 	// APISecret is the API secret for authenticating with Alpaca API
 	APISecret string `mapstructure:"api_secret" validate:"required"` // Ensure APISecret is provided
 	// BaseURL is the base URL for Alpaca API endpoints
@@ -66,14 +65,9 @@ func NewConfig() (*Config, error) {
 		cfg.Alpaca.BaseURL = "https://paper-api.alpaca.markets/v2" // Default to paper trading URL
 	}
 	// Read APIKey and APISecret from environment variables if set
-	_ = v.GetString("alpaca.api_key")
 	cfg.Alpaca.APIKey = v.GetString("alpaca.api_key")
-	_ = v.GetString("alpaca.api_secret")
 	cfg.Alpaca.APISecret = v.GetString("alpaca.api_secret")
 
-	if err := validate.Struct(&cfg); err != nil {
-		return nil, fmt.Errorf("config validation failed: %w", err)
-	}
 	// Validate the LogConfig section
 	if err := validate.Struct(&cfg); err != nil {
 		return nil, fmt.Errorf("config validation failed: %w", err)

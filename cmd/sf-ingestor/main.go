@@ -41,4 +41,17 @@ func main() {
 	} else {
 		appLogger.Info().Msg("Connected to Alpaca WebSocket successfully")
 	}
+
+	symbolsToTrade := []string{"AAPL", "GOOGL", "TSLA"} // Example symbols to trade
+	if err := alpacaClient.Subscribe(symbolsToTrade); err != nil {
+		appLogger.Fatal().Err(err).Msg("Failed to subscribe to symbols")
+	} else {
+		appLogger.Info().Msg("Subscribed to symbols successfully")
+	}
+
+	go alpacaClient.Listen()
+
+	appLogger.Info().Msg("Listening for trade updates...")
+
+	select {} // Keep the main goroutine running
 }

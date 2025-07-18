@@ -26,11 +26,13 @@ type Config struct {
 // It includes authentication credentials and endpoint information.
 type AlpacaConfig struct {
 	// APIKey is the API key for authenticating with Alpaca API
-	APIKey string `mapstructure:"api_key" validate:"required"` // Ensure APIKey is provided
+	Action string `mapstructure:"action" validate:"required,oneof=buy sell"` // Ensure Action is provided and valid
+	APIKey string `mapstructure:"api_key" validate:"required"`               // Ensure APIKey is provided
 	// APISecret is the API secret for authenticating with Alpaca API
 	APISecret string `mapstructure:"api_secret" validate:"required"` // Ensure APISecret is provided
 	// BaseURL is the base URL for Alpaca API endpoints
-	BaseURL string `mapstructure:"base_url" validate:"required,url"` // Ensure BaseURL is provided
+	BaseURL   string `mapstructure:"base_url" validate:"required,url"`   // Ensure BaseURL is provided
+	StreamURL string `mapstructure:"stream_url" validate:"required,url"` // Ensure StreamURL is provided
 }
 
 func NewConfig() (*Config, error) {
@@ -41,9 +43,10 @@ func NewConfig() (*Config, error) {
 	v.SetConfigName("config") // name of config file (without extension)
 	v.SetConfigType("yaml")   // type of the config file (yaml, json, etc.)
 	v.AddConfigPath(".")
-	v.SetDefault("log.level_console", "info")                              // Default log level for console output
-	v.SetDefault("log.level_file", "info")                                 // Default log level for file output
-	v.SetDefault("alpaca.base_url", "https://paper-api.alpaca.markets/v2") // Default base URL for Alpaca API
+	v.SetDefault("log.level_console", "info")                                  // Default log level for console output
+	v.SetDefault("log.level_file", "info")                                     // Default log level for file output
+	v.SetDefault("alpaca.base_url", "https://paper-api.alpaca.markets/v2")     // Default base URL for Alpaca API
+	v.SetDefault("alpaca.stream_url", "wss://paper-api.alpaca.markets/stream") // Default stream URL for Alpaca API
 
 	if err := v.ReadInConfig(); err != nil {
 		return nil, fmt.Errorf("error reading config file: %w", err)

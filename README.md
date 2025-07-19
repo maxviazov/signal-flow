@@ -90,7 +90,7 @@ The application supports configuration through both YAML files and environment v
 ```yaml
 alpaca:
   base_url: "https://paper-api.alpaca.markets"
-  stream_url: "wss://stream.data.alpaca.markets/v2/iex"
+  stream_url: "wss://stream.data.streamers.markets/v2/iex"
 
 log:
   level_console: "info"

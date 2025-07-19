@@ -1,4 +1,4 @@
-package alpaca
+package streamers
 
 import (
 	"encoding/json"
@@ -9,8 +9,8 @@ import (
 	"time"
 )
 
-// Client handles the connection and communication with the Alpaca WebSocket API.
-type Client struct {
+// StreamerClient handles the connection and communication with the Alpaca WebSocket API.
+type StreamerClient struct {
 	cfg    config.AlpacaConfig
 	logger *zerolog.Logger
 	conn   *websocket.Conn
@@ -48,15 +48,15 @@ type responseMsg struct {
 }
 
 // New creates a new Alpaca client.
-func New(cfg config.AlpacaConfig, logger *zerolog.Logger) *Client {
-	return &Client{
+func New(cfg config.AlpacaConfig, logger *zerolog.Logger) *StreamerClient {
+	return &StreamerClient{
 		cfg:    cfg,
 		logger: logger,
 	}
 }
 
 // Connect establishes a WebSocket connection, sets up handlers, and authenticates.
-func (c *Client) Connect() error {
+func (c *StreamerClient) Connect() error {
 	c.logger.Info().Str("url", c.cfg.StreamURL).Msg("Connecting to Alpaca WebSocket...")
 
 	conn, _, err := websocket.DefaultDialer.Dial(c.cfg.StreamURL, nil)
@@ -110,7 +110,7 @@ func (c *Client) Connect() error {
 }
 
 // Subscribe sends a subscription request and waits for confirmation.
-func (c *Client) Subscribe(symbols []string) error {
+func (c *StreamerClient) Subscribe(symbols []string) error {
 	c.logger.Info().Strs("symbols", symbols).Msg("Subscribing to trades")
 	msg := subscribeRequest{
 		Action: "subscribe",
@@ -135,7 +135,7 @@ func (c *Client) Subscribe(symbols []string) error {
 
 // Listen starts an infinite loop to read market data from the WebSocket.
 // This should be run in a separate goroutine.
-func (c *Client) Listen() {
+func (c *StreamerClient) Listen() {
 	c.logger.Info().Msg("Starting to listen for market data...")
 	for {
 		_, message, err := c.conn.ReadMessage()
@@ -151,7 +151,7 @@ func (c *Client) Listen() {
 
 // waitForResponse reads messages from the connection until it finds one
 // with a "msg" field matching the expectedMsg.
-func (c *Client) waitForResponse(expectedMsg string) error {
+func (c *StreamerClient) waitForResponse(expectedMsg string) error {
 	for {
 		_, msgBytes, err := c.conn.ReadMessage()
 		if err != nil {
@@ -177,7 +177,7 @@ func (c *Client) waitForResponse(expectedMsg string) error {
 				return nil
 			}
 			if r.Type == "error" {
-				return fmt.Errorf("received error from alpaca: %s", string(msgBytes))
+				return fmt.Errorf("received error from streamers: %s", string(msgBytes))
 			}
 		}
 	}

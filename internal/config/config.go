@@ -17,7 +17,7 @@ type LogConfig struct {
 // It contains all the necessary configuration sections.
 type Config struct {
 	// Alpaca contains the configuration for Alpaca API integration
-	Alpaca AlpacaConfig `mapstructure:"alpaca"`
+	Alpaca AlpacaConfig `mapstructure:"streamers"`
 	// Log contains the logging configuration for the application
 	Log LogConfig `mapstructure:"log" validate:"required"` // Ensure LogConfig is provided
 }
@@ -42,10 +42,10 @@ func NewConfig() (*Config, error) {
 	v.SetConfigName("config") // name of config file (without extension)
 	v.SetConfigType("yaml")   // type of the config file (yaml, json, etc.)
 	v.AddConfigPath(".")
-	v.SetDefault("log.level_console", "info")                                  // Default log level for console output
-	v.SetDefault("log.level_file", "info")                                     // Default log level for file output
-	v.SetDefault("alpaca.base_url", "https://paper-api.alpaca.markets/v2")     // Default base URL for Alpaca API
-	v.SetDefault("alpaca.stream_url", "wss://paper-api.alpaca.markets/stream") // Default stream URL for Alpaca API
+	v.SetDefault("log.level_console", "info")                                        // Default log level for console output
+	v.SetDefault("log.level_file", "info")                                           // Default log level for file output
+	v.SetDefault("streamers.base_url", "https://paper-api.alpaca.markets/v2")        // Default base URL for Alpaca API
+	v.SetDefault("streamers.stream_url", "wss://paper-api.streamers.markets/stream") // Default stream URL for Alpaca API
 
 	if err := v.ReadInConfig(); err != nil {
 		return nil, fmt.Errorf("error reading config file: %w", err)
@@ -60,13 +60,13 @@ func NewConfig() (*Config, error) {
 	v.AutomaticEnv() // read in environment variables that match
 
 	// Override config values with environment variables
-	cfg.Alpaca.BaseURL = v.GetString("alpaca.base_url")
+	cfg.Alpaca.BaseURL = v.GetString("streamers.base_url")
 	if cfg.Alpaca.BaseURL == "" {
 		cfg.Alpaca.BaseURL = "https://paper-api.alpaca.markets/v2" // Default to paper trading URL
 	}
 	// Read APIKey and APISecret from environment variables if set
-	cfg.Alpaca.APIKey = v.GetString("alpaca.api_key")
-	cfg.Alpaca.APISecret = v.GetString("alpaca.api_secret")
+	cfg.Alpaca.APIKey = v.GetString("streamers.api_key")
+	cfg.Alpaca.APISecret = v.GetString("streamers.api_secret")
 
 	// Validate the LogConfig section
 	if err := validate.Struct(&cfg); err != nil {

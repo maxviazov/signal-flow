@@ -1,6 +1,6 @@
 streamers:
   base_url: "https://paper-api.alpaca.markets"
-#  stream_url: "wss://stream.data.alpaca.markets/v1beta1/crypto"
+  #  stream_url: "wss://stream.data.alpaca.markets/v1beta1/crypto"
   stream_url: "wss://stream.data.alpaca.markets/v2/iex"
 
 log:

@@ -9,8 +9,8 @@ import (
 )
 
 type LogConfig struct {
-	LevelConsole string `mapstructure:"level_console" validate:"required,oneof=debug info warn error fatal panic"` // Log level for console output
-	LevelFile    string `mapstructure:"level_file" validate:"required,oneof=debug info warn error fatal panic"`    // Log level for file output
+	LevelConsole string `mapstructure:"level_console" validate:"required,oneof=debug info warn error fatal panic"`
+	LevelFile    string `mapstructure:"level_file" validate:"required,oneof=debug info warn error fatal panic"`
 }
 
 // Config represents the main configuration structure for the application.
@@ -39,7 +39,7 @@ func overrideAlpacaSecretsFromEnv(v *viper.Viper, alpaca *AlpacaConfig) {
 		alpaca.APIKey = apiKey // Explicit override of APIKey from environment variables for security and best practice
 	}
 	if apiSecret := v.GetString("streamers.api_secret"); apiSecret != "" {
-		alpaca.APISecret = apiSecret // Explicit override of APISecret from environment variables for security and best practice
+		alpaca.APISecret = apiSecret
 	}
 }
 
@@ -52,10 +52,10 @@ func NewConfig() (*Config, error) {
 	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	v.AutomaticEnv()
 	// Set default values for configuration
-	v.SetDefault("log.level_console", "info")                                        // Default log level for console output
-	v.SetDefault("log.level_file", "info")                                           // Default log level for file output
-	v.SetDefault("streamers.base_url", "https://paper-api.alpaca.markets/v2")        // Default base URL for Alpaca API
-	v.SetDefault("streamers.stream_url", "wss://paper-api.streamers.markets/stream") // Default stream URL for Alpaca API
+	v.SetDefault("log.level_console", "info")
+	v.SetDefault("log.level_file", "info")
+	v.SetDefault("streamers.base_url", "https://paper-api.alpaca.markets/v2")
+	v.SetDefault("streamers.stream_url", "wss://paper-api.streamers.markets/stream")
 
 	// Read the configuration file
 	if err := v.ReadInConfig(); err != nil {

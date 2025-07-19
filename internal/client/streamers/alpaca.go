@@ -10,8 +10,8 @@ import (
 	"time"
 )
 
-// StreamerClient handles the connection and communication with the Alpaca WebSocket API.
-type StreamerClient struct {
+// streamerClient handles the connection and communication with the Alpaca WebSocket API.
+type streamerClient struct {
 	cfg    config.AlpacaConfig
 	logger *zerolog.Logger
 	conn   *websocket.Conn
@@ -25,8 +25,8 @@ type subscribeRequest struct {
 	Bars   []string `json:"bars,omitempty"`
 }
 
-// TradeUpdate defines the structure for a trade message from Alpaca.
-type TradeUpdate struct {
+// tradeUpdate defines the structure for a trade message from Alpaca.
+type tradeUpdate struct {
 	Type      string  `json:"T"`
 	Symbol    string  `json:"S"`
 	Price     float64 `json:"p"`
@@ -50,14 +50,14 @@ type responseMsg struct {
 
 // New creates a new Alpaca client that implements the streamer.Streamer interface.
 func New(cfg config.AlpacaConfig, logger *zerolog.Logger) streamer.Streamer {
-	return &StreamerClient{
+	return &streamerClient{
 		cfg:    cfg,
 		logger: logger,
 	}
 }
 
 // Connect establishes a WebSocket connection, sets up handlers, and authenticates.
-func (c *StreamerClient) Connect() error {
+func (c *streamerClient) Connect() error {
 	c.logger.Info().Str("url", c.cfg.StreamURL).Msg("Connecting to Alpaca WebSocket...")
 
 	conn, _, err := websocket.DefaultDialer.Dial(c.cfg.StreamURL, nil)
@@ -111,7 +111,7 @@ func (c *StreamerClient) Connect() error {
 }
 
 // Subscribe sends a subscription request and waits for confirmation.
-func (c *StreamerClient) Subscribe(symbols []string) error {
+func (c *streamerClient) Subscribe(symbols []string) error {
 	c.logger.Info().Strs("symbols", symbols).Msg("Subscribing to trades")
 	msg := subscribeRequest{
 		Action: "subscribe",
@@ -135,7 +135,7 @@ func (c *StreamerClient) Subscribe(symbols []string) error {
 }
 
 // Listen starts an infinite loop to read market data from the WebSocket.
-func (c *StreamerClient) Listen() error {
+func (c *streamerClient) Listen() error {
 	c.logger.Info().Msg("Starting to listen for market data...")
 	for {
 		_, message, err := c.conn.ReadMessage()
@@ -143,7 +143,7 @@ func (c *StreamerClient) Listen() error {
 			c.logger.Error().Err(err).Msg("Error during message reading")
 			return err
 		}
-		fmt.Printf("\033[33m%s\\033[0m\\n\", string(message)")
+		fmt.Printf("\033[33m%s\033[0m\n", string(message))
 		// For now, we just log the raw message.
 		// In the future, this is where you will parse the TradeUpdate and save it.
 		c.logger.Info().RawJSON("market_data", message).Msg("Received data")
@@ -152,7 +152,7 @@ func (c *StreamerClient) Listen() error {
 
 // waitForResponse reads messages from the connection until it finds one
 // with a "msg" field matching the expectedMsg.
-func (c *StreamerClient) waitForResponse(expectedMsg string) error {
+func (c *streamerClient) waitForResponse(expectedMsg string) error {
 	for {
 		_, msgBytes, err := c.conn.ReadMessage()
 		if err != nil {

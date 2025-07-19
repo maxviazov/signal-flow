@@ -7,10 +7,10 @@ import (
 	"os"
 )
 
-// Logger wraps zerolog.Logger and provides additional functionality for managing log files.
+// logger wraps zerolog.Logger and provides additional functionality for managing log files.
 // It embeds zerolog.Logger to provide all standard logging methods while adding
 // file management capabilities through the logFile field.
-type Logger struct {
+type logger struct {
 	zerolog.Logger
 	logFile *os.File
 }
@@ -18,14 +18,14 @@ type Logger struct {
 // Close closes the underlying log file if it exists.
 // It returns an error if the file cannot be closed properly.
 // If no log file is associated with the logger, it returns nil.
-func (l *Logger) Close() error {
+func (l *logger) Close() error {
 	if l.logFile != nil {
 		return l.logFile.Close()
 	}
 	return nil
 }
 
-// NewLogger creates a new Logger instance with specified console and file log levels.
+// NewLogger creates a new logger instance with specified console and file log levels.
 // The levelConsole parameter sets the minimum log level for console output,
 // while levelFile sets the minimum log level for file output.
 // The function creates a logs directory if it doesn't exist and opens/creates
@@ -34,7 +34,7 @@ func (l *Logger) Close() error {
 // The global log level is set to the more restrictive (lower) of the two levels.
 // Returns an error if log levels are invalid, directory creation fails, or
 // log file cannot be opened.
-func NewLogger(levelConsole, levelFile string) (*Logger, error) {
+func NewLogger(levelConsole, levelFile string) (*logger, error) {
 	parsedConsoleLevel, err := zerolog.ParseLevel(levelConsole)
 	if err != nil {
 		return nil, fmt.Errorf("invalid console log level: %w", err)
@@ -61,7 +61,7 @@ func NewLogger(levelConsole, levelFile string) (*Logger, error) {
 	multiWriter := zerolog.MultiLevelWriter(consoleWriter, logFile)
 	zLogger := zerolog.New(multiWriter).Level(globalLevel).With().Timestamp().Logger()
 
-	return &Logger{
+	return &logger{
 		Logger:  zLogger,
 		logFile: logFile,
 	}, nil

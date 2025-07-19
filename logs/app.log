@@ -313,3 +313,16 @@
 {"level":"info","time":"2025-07-19T20:57:28+03:00","message":"Successfully authenticated with Alpaca"}
 {"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:57:28+03:00","message":"Subscribing to trades"}
 {"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:57:28+03:00","message":"Checking response from server"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T21:29:21+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T21:29:21+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T21:29:21+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T21:29:21+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T21:29:21+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T21:29:21+03:00","message":"Checking response from server"}

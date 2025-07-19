@@ -34,6 +34,11 @@ type AlpacaConfig struct {
 	StreamURL string `mapstructure:"stream_url" validate:"required,url"` // Ensure StreamURL is provided
 }
 
+type PostgresConfig struct {
+	// Add fields for Postgres configuration as needed
+
+}
+
 func overrideAlpacaSecretsFromEnv(v *viper.Viper, alpaca *AlpacaConfig) {
 	if apiKey := v.GetString("streamers.api_key"); apiKey != "" {
 		alpaca.APIKey = apiKey // Explicit override of APIKey from environment variables for security and best practice

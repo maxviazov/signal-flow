@@ -6,3 +6,7 @@ streamers:
 log:
   level_console: "info"
   level_file: "debug"
+
+postgres:
+  host: "localhost"
+  port: 5432

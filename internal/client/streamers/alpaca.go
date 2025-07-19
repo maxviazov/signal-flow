@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gorilla/websocket"
 	"github.com/maxviazov/signal-flow/internal/config"
+	"github.com/maxviazov/signal-flow/pkg/streamer"
 	"github.com/rs/zerolog"
 	"time"
 )
@@ -47,8 +48,8 @@ type responseMsg struct {
 	Msg  string `json:"msg"`
 }
 
-// New creates a new Alpaca client.
-func New(cfg config.AlpacaConfig, logger *zerolog.Logger) *StreamerClient {
+// New creates a new Alpaca client that implements the streamer.Streamer interface.
+func New(cfg config.AlpacaConfig, logger *zerolog.Logger) streamer.Streamer {
 	return &StreamerClient{
 		cfg:    cfg,
 		logger: logger,
@@ -134,15 +135,15 @@ func (c *StreamerClient) Subscribe(symbols []string) error {
 }
 
 // Listen starts an infinite loop to read market data from the WebSocket.
-// This should be run in a separate goroutine.
-func (c *StreamerClient) Listen() {
+func (c *StreamerClient) Listen() error {
 	c.logger.Info().Msg("Starting to listen for market data...")
 	for {
 		_, message, err := c.conn.ReadMessage()
 		if err != nil {
 			c.logger.Error().Err(err).Msg("Error during message reading")
-			return
+			return err
 		}
+		fmt.Printf("\033[33m%s\\033[0m\\n\", string(message)")
 		// For now, we just log the raw message.
 		// In the future, this is where you will parse the TradeUpdate and save it.
 		c.logger.Info().RawJSON("market_data", message).Msg("Received data")

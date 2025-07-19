@@ -36,3 +36,6 @@ logs/
 
 # macOS system files
 .DS_Store!/sf-ingestor
+!/test/
+/test/logger_test.go
+!/logs/

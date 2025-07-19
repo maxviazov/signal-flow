@@ -34,19 +34,30 @@ type AlpacaConfig struct {
 	StreamURL string `mapstructure:"stream_url" validate:"required,url"` // Ensure StreamURL is provided
 }
 
-func NewConfig() (*Config, error) {
-	v := viper.New()
-	validate := validator.New()
+func overrideAlpacaSecretsFromEnv(v *viper.Viper, alpaca *AlpacaConfig) {
+	if apiKey := v.GetString("streamers.api_key"); apiKey != "" {
+		alpaca.APIKey = apiKey // Explicit override of APIKey from environment variables for security and best practice
+	}
+	if apiSecret := v.GetString("streamers.api_secret"); apiSecret != "" {
+		alpaca.APISecret = apiSecret // Explicit override of APISecret from environment variables for security and best practice
+	}
+}
 
-	// Set up Viper to read configuration from a file
-	v.SetConfigName("config") // name of config file (without extension)
-	v.SetConfigType("yaml")   // type of the config file (yaml, json, etc.)
+func NewConfig() (*Config, error) {
+	// Create a new Viper instance for configuration management
+	v := viper.New()
+	v.SetConfigName("config")
+	v.SetConfigType("yaml")
 	v.AddConfigPath(".")
+	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
+	v.AutomaticEnv()
+	// Set default values for configuration
 	v.SetDefault("log.level_console", "info")                                        // Default log level for console output
 	v.SetDefault("log.level_file", "info")                                           // Default log level for file output
 	v.SetDefault("streamers.base_url", "https://paper-api.alpaca.markets/v2")        // Default base URL for Alpaca API
 	v.SetDefault("streamers.stream_url", "wss://paper-api.streamers.markets/stream") // Default stream URL for Alpaca API
 
+	// Read the configuration file
 	if err := v.ReadInConfig(); err != nil {
 		return nil, fmt.Errorf("error reading config file: %w", err)
 	}
@@ -56,19 +67,11 @@ func NewConfig() (*Config, error) {
 		return nil, fmt.Errorf("error unmarshalling config: %w", err)
 	}
 
-	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
-	v.AutomaticEnv() // read in environment variables that match
-
-	// Override config values with environment variables
-	cfg.Alpaca.BaseURL = v.GetString("streamers.base_url")
-	if cfg.Alpaca.BaseURL == "" {
-		cfg.Alpaca.BaseURL = "https://paper-api.alpaca.markets/v2" // Default to paper trading URL
-	}
-	// Read APIKey and APISecret from environment variables if set
-	cfg.Alpaca.APIKey = v.GetString("streamers.api_key")
-	cfg.Alpaca.APISecret = v.GetString("streamers.api_secret")
+	// Override Alpaca secrets from environment variables if set (explicit override for security and best practice)
+	overrideAlpacaSecretsFromEnv(v, &cfg.Alpaca)
 
 	// Validate the LogConfig section
+	validate := validator.New()
 	if err := validate.Struct(&cfg); err != nil {
 		return nil, fmt.Errorf("config validation failed: %w", err)
 	}

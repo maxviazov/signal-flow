@@ -53,6 +53,7 @@ func NewLogger(levelConsole, levelFile string) (*Logger, error) {
 	if err := os.MkdirAll("logs", 0755); err != nil {
 		return nil, fmt.Errorf("error creating logs directory: %w", err)
 	}
+	consoleWriter.NoColor = false // Enable colors in console output
 	logFile, err := os.OpenFile("logs/app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
 		return nil, fmt.Errorf("error opening log file: %w", err)

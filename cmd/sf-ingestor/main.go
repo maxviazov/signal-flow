@@ -1,11 +1,16 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"github.com/maxviazov/signal-flow/internal/client/streamers"
 	"github.com/maxviazov/signal-flow/internal/config"
+	"github.com/maxviazov/signal-flow/internal/repository/postgres"
 	"github.com/maxviazov/signal-flow/pkg/logger"
 	"log"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 func main() {
@@ -26,10 +31,28 @@ func main() {
 		}
 	}()
 
+	ctx := context.Background()
+	initDB, err := postgres.New(ctx, cfg)
+	if err != nil {
+		appLogger.Fatal().Err(err).Msg("Failed to initialize Postgres repository")
+	}
+
+	ctx, cancel := context.WithCancel(ctx)
+	defer cancel()
+
+	sigChan := make(chan os.Signal, 1)
+	signal.Notify(sigChan, os.Interrupt, syscall.SIGTERM)
+
+	go func() {
+		<-sigChan
+		appLogger.Info().Msg("Received shutdown signal, shutting down gracefully...")
+		cancel()
+	}()
 	appLogger.Info().Msg("Logger initialized successfully")
 	appLogger.Info().Msg("Starting sf-ingestor service...")
 	appLogger.Info().Msgf("Alpaca Base URL: %s", cfg.Alpaca.BaseURL)
 	appLogger.Info().Msg("Service started successfully")
+	appLogger.Info().Msgf("Postgres: %+v", initDB)
 
 	marketStream := streamers.New(cfg.Alpaca, &appLogger.Logger)
 

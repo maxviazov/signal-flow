@@ -6,98 +6,96 @@
 [![Issues](https://img.shields.io/github/issues/maxviazov/signal-flow)](https://github.com/maxviazov/signal-flow/issues)
 [![Stars](https://img.shields.io/github/stars/maxviazov/signal-flow?style=social)](https://github.com/maxviazov/signal-flow/stargazers)
 
-> **SignalFlow** — event-driven платформа для анализа рыночных данных в реальном времени, обогащённая ИИ-анализом новостей.
+---
+
+**SignalFlow** is an event-driven platform for real-time market data ingestion and analysis, enriched with AI-based news sentiment features.
 
 ---
 
 ## 📚 Table of Contents
 
-- [🔍 About the Project](#-about-the-project)
-- [📐 Architecture](#-architecture)
-- [🧰 Tech Stack](#-tech-stack)
-- [🚀 Getting Started](#-getting-started)
-- [🗺️ Roadmap](#-roadmap)
-- [🤝 Contribution](#-contribution)
-- [🪪 License](#-license)
+- [About the Project](#about-the-project)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Roadmap](#roadmap)
+- [Contribution](#contribution)
+- [License](#license)
 
 ---
 
-## 🔍 About the Project
+## 🧠 About the Project
 
-SignalFlow агрегирует рыночные данные и потоковые новости, обрабатывает их в реальном времени и предоставляет удобный интерфейс для аналитики.  
-Система проектировалась с учётом модульности, расширяемости и надёжности.
+SignalFlow provides a scalable infrastructure to consume, process, and store real-time financial data from sources like Alpaca, with optional extensions for news analytics using AI.
 
 ---
 
-## 📐 Architecture
+## 🏗 Architecture
 
-```mermaid
-flowchart LR
-  A[Alpaca Market Data] --> B[Stream Client]
-  B --> C[Kafka (в будущем)]
-  C --> D[PostgreSQL Storage]
-  D --> E[Analytics Engine]
-  E --> F[REST/WebSocket API]
-```
-
-> В текущей версии реализован прямой поток данных → хранилище → логгер
+- **sf-ingestor**: main entrypoint service for consuming and logging streamed data
+- **internal/**: modular implementation for configuration, DB, and client interaction
+- **pkg/**: utilities such as logger and streamer abstraction
+- **docker-compose**: PostgreSQL, services orchestration for local development
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer          | Technology                |
-|----------------|---------------------------|
-| Language       | Go                        |
-| Configuration  | Viper + YAML              |
-| Logging        | Zerolog                   |
-| API/Streaming  | WebSockets (Alpaca)       |
-| Storage        | PostgreSQL (pgxpool)      |
-| Container      | Docker + Compose          |
-| Linting        | golangci-lint             |
+| Layer           | Technology                     |
+|----------------|---------------------------------|
+| Language        | Go                              |
+| Configuration   | Viper + YAML                    |
+| Logging         | Zerolog                         |
+| API/Streaming   | WebSockets (Alpaca)             |
+| Storage         | PostgreSQL (pgxpool)            |
+| Containerization| Docker + Compose                |
+| Linting         | golangci-lint                   |
 
 ---
 
 ## 🚀 Getting Started
 
-### 🔧 Requirements
+### Requirements
 
 - Go 1.21+
 - Docker & Docker Compose
-- Alpaca API ключи
+- Alpaca API keys
 
-### 📦 Setup
+### Setup
 
 ```bash
 git clone https://github.com/maxviazov/signal-flow.git
 cd signal-flow
+
 cp config.yaml.example config.yaml
-# укажи переменные в .env или config.yaml
+# or use environment variables via .env
+
 make build
 make run
 ```
 
 ---
 
-## 🗺️ Roadmap
+## 🛣 Roadmap
 
-- [x] Конфигурация через Viper
-- [x] Логгирование Zerolog
-- [x] WebSocket-интеграция с Alpaca
-- [ ] Подключение Kafka
-- [ ] Интеграция Redis Pub/Sub
-- [ ] Интерфейс аналитики на WebSocket API
-- [ ] Веб-дашборд на React (возможно)
+- [x] Viper-based configuration
+- [x] Zerolog logging
+- [x] Alpaca WebSocket integration
+- [ ] Kafka support
+- [ ] Redis Pub/Sub middleware
+- [ ] Public WebSocket API
+- [ ] React-based dashboard (maybe 😉)
 
 ---
 
 ## 🤝 Contribution
 
-Pull requests приветствуются! Для крупных изменений — сначала открой issue.  
-Форматируй код с `go fmt`, соблюдай стиль.
+Pull requests are welcome! For major changes, please open an issue first and follow the project code style via `go fmt`.
 
 ---
 
-## 🪪 License
+## 📄 License
 
-Этот проект лицензирован под [MIT](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---

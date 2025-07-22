@@ -1,0 +1,16 @@
+streamers:
+  base_url: "https://paper-api.alpaca.markets"
+  stream_url: "wss://stream.data.alpaca.markets/v2/iex"
+  api_key: "${ALPACA_API_KEY}"
+  api_secret: "${ALPACA_API_SECRET}"
+
+log:
+  level_console: "info"
+  level_file: "debug"
+
+postgres:
+  postgres_host: "localhost"
+  postgres_port: 5432
+  postgres_user: "${POSTGRES_USER}"
+  postgres_password: "${POSTGRES_PASSWORD}"
+  postgres_db: "signal_flow"

@@ -1,41 +1,4 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Code coverage profiles and other test artifacts
-*.out
-coverage.*
-*.coverprofile
-profile.cov
-
-# Dependency directories
-vendor/
-
-# Go workspace file
-go.work
-go.work.sum
-
-# Environment variables file
 .env
-.env.*
-!/.env.example
-
-# Log files and directories
-logs/
 *.log
-
-# IDE settings
-.idea/
-.vscode/
-
-# macOS system files
-.DS_Store!/sf-ingestor
-!/test/
-/test/logger_test.go
-!/logs/
+logs/
+config.yaml

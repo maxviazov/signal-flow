@@ -1,60 +1,103 @@
 # SignalFlow
 
-Event-driven platform for real-time market data analysis, enriched with AI-driven news sentiment.
+[![Go Version](https://img.shields.io/badge/go-1.21+-brightgreen)](https://golang.org/)
+[![License](https://img.shields.io/github/license/maxviazov/signal-flow)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/maxviazov/signal-flow)](https://github.com/maxviazov/signal-flow/commits/main)
+[![Issues](https://img.shields.io/github/issues/maxviazov/signal-flow)](https://github.com/maxviazov/signal-flow/issues)
+[![Stars](https://img.shields.io/github/stars/maxviazov/signal-flow?style=social)](https://github.com/maxviazov/signal-flow/stargazers)
 
-## Table of Contents
+> **SignalFlow** — event-driven платформа для анализа рыночных данных в реальном времени, обогащённая ИИ-анализом новостей.
 
-- [About The Project](#about-the-project)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Roadmap](#roadmap)
-- [License](#license)
+---
 
-## About The Project
+## 📚 Table of Contents
 
-SignalFlow is a backend system designed to ingest real-time market data, calculate technical indicators, and enrich them
-with AI-powered news analysis. The primary goal is to provide a robust foundation for building automated trading
-strategies or advanced market monitoring tools.
+- [🔍 About the Project](#-about-the-project)
+- [📐 Architecture](#-architecture)
+- [🧰 Tech Stack](#-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+- [🗺️ Roadmap](#-roadmap)
+- [🤝 Contribution](#-contribution)
+- [🪪 License](#-license)
 
-This project serves as a portfolio piece demonstrating a modern, event-driven microservices architecture using Go,
-Python, and Google Cloud Platform.
+---
 
-## Architecture
+## 🔍 About the Project
 
-The system is composed of several independent microservices communicating via a message broker:
+SignalFlow агрегирует рыночные данные и потоковые новости, обрабатывает их в реальном времени и предоставляет удобный интерфейс для аналитики.  
+Система проектировалась с учётом модульности, расширяемости и надёжности.
 
-- **`sf-ingestor`**: A Go service responsible for connecting to market data WebSocket APIs and publishing raw ticks to a
-  message queue.
-- **`sf-calculator`**: A Go service that consumes raw data, calculates technical indicators, stores data in a
-  time-series database, and publishes trading signals.
-- **`sf-news-analyzer`**: A Python service that periodically fetches financial news, analyzes sentiment using an LLM,
-  and publishes the analysis.
+---
 
-*A diagram will be added here later.*
+## 📐 Architecture
 
-## Tech Stack
+```mermaid
+flowchart LR
+  A[Alpaca Market Data] --> B[Stream Client]
+  B --> C[Kafka (в будущем)]
+  C --> D[PostgreSQL Storage]
+  D --> E[Analytics Engine]
+  E --> F[REST/WebSocket API]
+```
 
-- **Languages**: Go, Python
-- **Cloud Platform**: Google Cloud Platform (GCP)
-- **Messaging**: Google Cloud Pub/Sub
-- **Database**: TimescaleDB (PostgreSQL extension for time-series data)
-- **AI**: Google Gemini API
-- **Deployment**: Cloud Run, Docker
-- **CI/CD**: GitHub Actions
+> В текущей версии реализован прямой поток данных → хранилище → логгер
 
-## Getting Started
+---
 
-To get a local copy up and running, follow these steps.
+## 🧰 Tech Stack
 
-### Prerequisites
+| Layer          | Technology                |
+|----------------|---------------------------|
+| Language       | Go                        |
+| Configuration  | Viper + YAML              |
+| Logging        | Zerolog                   |
+| API/Streaming  | WebSockets (Alpaca)       |
+| Storage        | PostgreSQL (pgxpool)      |
+| Container      | Docker + Compose          |
+| Linting        | golangci-lint             |
 
-- Go (latest version)
+---
+
+## 🚀 Getting Started
+
+### 🔧 Requirements
+
+- Go 1.21+
 - Docker & Docker Compose
-- `make` utility
+- Alpaca API ключи
 
-### Installation
+### 📦 Setup
 
-1. Clone the repo
-   ```sh
-   git clone [https://github.com/your_username/signal-flow.git](https://github.com/maxviazov/signal-flow.git)
+```bash
+git clone https://github.com/maxviazov/signal-flow.git
+cd signal-flow
+cp config.yaml.example config.yaml
+# укажи переменные в .env или config.yaml
+make build
+make run
+```
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Конфигурация через Viper
+- [x] Логгирование Zerolog
+- [x] WebSocket-интеграция с Alpaca
+- [ ] Подключение Kafka
+- [ ] Интеграция Redis Pub/Sub
+- [ ] Интерфейс аналитики на WebSocket API
+- [ ] Веб-дашборд на React (возможно)
+
+---
+
+## 🤝 Contribution
+
+Pull requests приветствуются! Для крупных изменений — сначала открой issue.  
+Форматируй код с `go fmt`, соблюдай стиль.
+
+---
+
+## 🪪 License
+
+Этот проект лицензирован под [MIT](LICENSE).

@@ -1,0 +1,390 @@
+{"level":"info","time":"2025-07-16T22:19:47+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-16T22:19:47+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-16T22:19:47+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-16T22:19:47+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-16T22:19:47+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-16T22:24:53+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-16T22:24:53+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-16T22:24:53+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-16T22:24:53+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-16T22:24:53+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-16T22:29:28+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-16T22:29:28+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-16T22:29:28+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-16T22:29:28+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-16T22:29:28+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-16T22:29:30+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-16T22:29:30+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-16T22:29:30+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-16T22:29:30+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-16T22:29:30+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-16T22:31:44+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-16T22:31:44+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-16T22:31:44+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-16T22:31:44+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-16T22:31:44+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-16T22:35:00+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-17T08:21:36+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-17T08:51:32+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-17T08:51:32+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-17T08:51:32+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-17T08:51:32+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-17T08:51:32+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-17T09:53:55+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-17T09:53:55+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-17T09:53:55+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-17T09:53:55+03:00","message":"Alpaca API Key (first 5 characters): your_"}
+{"level":"info","time":"2025-07-17T09:53:55+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-17T10:02:29+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-17T10:02:29+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-17T10:02:29+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-17T10:02:29+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-17T10:02:29+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-17T10:02:59+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-17T10:02:59+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-17T10:02:59+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-17T10:02:59+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-17T10:02:59+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-18T10:25:09+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T10:25:09+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T10:25:09+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-18T10:25:09+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T10:25:09+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-18T16:05:25+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T16:05:25+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T16:05:25+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-18T16:05:25+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T16:05:25+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-18T16:05:25+03:00","message":"sf-ingestor service is running..."}
+{"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T16:05:52+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T17:07:01+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T17:07:01+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"Sending authentication request..."}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T17:07:03+03:00","message":"Connected to Alpaca WebSocket successfully"}
+{"level":"info","time":"2025-07-18T20:32:03+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T20:32:03+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T20:32:03+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T20:32:03+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T20:32:03+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T20:32:03+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Sending authentication request..."}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Connected to Alpaca WebSocket successfully"}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Successfully subscribed to symbols"}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Subscribed to symbols successfully"}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Listening for trade updates..."}
+{"level":"info","time":"2025-07-18T20:32:04+03:00","message":"Listening for messages..."}
+{"level":"info","message":"[{\"T\":\"success\",\"msg\":\"connected\"}]","time":"2025-07-18T20:32:04+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":409,\"msg\":\"insufficient subscription\"}]","time":"2025-07-18T20:32:04+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":401,\"msg\":\"not authenticated\"}]","time":"2025-07-18T20:32:04+03:00","message":"Received message"}
+{"level":"error","error":"websocket: close 1006 (abnormal closure): unexpected EOF","time":"2025-07-18T20:32:14+03:00","message":"Error reading message from WebSocket"}
+{"level":"info","time":"2025-07-18T20:38:45+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T20:38:45+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T20:38:45+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T20:38:45+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T20:38:45+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T20:38:45+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Sending authentication request..."}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Connected to Alpaca WebSocket successfully"}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Successfully subscribed to symbols"}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Subscribed to symbols successfully"}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Listening for trade updates..."}
+{"level":"info","time":"2025-07-18T20:38:46+03:00","message":"Listening for messages..."}
+{"level":"info","message":"[{\"T\":\"success\",\"msg\":\"connected\"}]","time":"2025-07-18T20:38:46+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":409,\"msg\":\"insufficient subscription\"}]","time":"2025-07-18T20:38:46+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":401,\"msg\":\"not authenticated\"}]","time":"2025-07-18T20:38:46+03:00","message":"Received message"}
+{"level":"error","error":"websocket: close 1006 (abnormal closure): unexpected EOF","time":"2025-07-18T20:38:56+03:00","message":"Error reading message from WebSocket"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T20:43:23+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Sending authentication request..."}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Connected to Alpaca WebSocket successfully"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Successfully subscribed to symbols"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Subscribed to symbols successfully"}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Listening for trade updates..."}
+{"level":"info","time":"2025-07-18T20:43:23+03:00","message":"Listening for messages..."}
+{"level":"info","message":"[{\"T\":\"success\",\"msg\":\"connected\"}]","time":"2025-07-18T20:43:23+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":409,\"msg\":\"insufficient subscription\"}]","time":"2025-07-18T20:43:23+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":401,\"msg\":\"not authenticated\"}]","time":"2025-07-18T20:43:23+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":404,\"msg\":\"auth timeout\"}]","time":"2025-07-18T20:43:33+03:00","message":"Received message"}
+{"level":"error","error":"websocket: close 1006 (abnormal closure): unexpected EOF","time":"2025-07-18T20:43:33+03:00","message":"Error reading message from WebSocket"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T20:49:56+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Sending authentication request..."}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Connected to Alpaca WebSocket successfully"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-18T20:49:56+03:00","message":"Subscribing to trades"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Successfully subscribed to symbols"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Subscribed to symbols successfully"}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Listening for trade updates..."}
+{"level":"info","time":"2025-07-18T20:49:56+03:00","message":"Listening for messages..."}
+{"level":"info","message":"[{\"T\":\"success\",\"msg\":\"connected\"}]","time":"2025-07-18T20:49:56+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":409,\"msg\":\"insufficient subscription\"}]","time":"2025-07-18T20:49:57+03:00","message":"Received message"}
+{"level":"info","message":"[{\"T\":\"error\",\"code\":401,\"msg\":\"not authenticated\"}]","time":"2025-07-18T20:49:57+03:00","message":"Received message"}
+{"level":"error","error":"websocket: close 1006 (abnormal closure): unexpected EOF","time":"2025-07-18T20:50:06+03:00","message":"Error reading message from WebSocket"}
+{"level":"info","time":"2025-07-18T20:53:04+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T20:53:04+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T20:53:04+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T20:53:04+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T20:53:04+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/sip","time":"2025-07-18T20:53:04+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T20:53:05+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T20:53:05+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-18T20:53:05+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"error","code":409,"msg":"insufficient subscription"}],"time":"2025-07-18T20:53:05+03:00","message":"Checking response from server"}
+{"level":"error","error":"received error from alpaca: [{\"T\":\"error\",\"code\":409,\"msg\":\"insufficient subscription\"}]","time":"2025-07-18T20:53:05+03:00","message":"Did not receive authentication confirmation"}
+{"level":"fatal","error":"received error from alpaca: [{\"T\":\"error\",\"code\":409,\"msg\":\"insufficient subscription\"}]","time":"2025-07-18T20:53:05+03:00","message":"Failed to connect to Alpaca WebSocket"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Alpaca API Key (first 5 characters): PKXBK"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-18T20:54:21+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-18T20:54:21+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-18T20:54:21+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-18T20:54:21+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","time":"2025-07-18T20:54:21+03:00","message":"Connected to Alpaca WebSocket successfully"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-18T20:54:21+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-18T20:54:22+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8944,"x":"V","p":185.01,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:28.57293755Z"}],"time":"2025-07-18T20:54:28+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8945,"x":"V","p":185.01,"s":13,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:29.186034591Z"}],"time":"2025-07-18T20:54:29+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8946,"x":"V","p":185.01,"s":5,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:30.321080153Z"}],"time":"2025-07-18T20:54:30+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"TSLA","i":8781,"x":"V","p":328.04,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:32.409079971Z"}],"time":"2025-07-18T20:54:32+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8947,"x":"V","p":185,"s":3,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:36.830858673Z"}],"time":"2025-07-18T20:54:36+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8948,"x":"V","p":185,"s":193,"c":["@"],"z":"C","t":"2025-07-18T17:54:40.718127644Z"}],"time":"2025-07-18T20:54:40+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8949,"x":"V","p":184.99,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:41.444325375Z"},{"T":"t","S":"GOOGL","i":8950,"x":"V","p":184.99,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:41.444340273Z"},{"T":"t","S":"GOOGL","i":8951,"x":"V","p":184.99,"s":900,"c":["@"],"z":"C","t":"2025-07-18T17:54:41.444345245Z"},{"T":"t","S":"GOOGL","i":8952,"x":"V","p":184.98,"s":10,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:41.445193364Z"},{"T":"t","S":"GOOGL","i":8953,"x":"V","p":184.98,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:41.445219305Z"}],"time":"2025-07-18T20:54:41+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"AAPL","i":7110,"x":"V","p":211.075,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:47.169288014Z"}],"time":"2025-07-18T20:54:47+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"AAPL","i":7111,"x":"V","p":211.075,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:47.246141009Z"}],"time":"2025-07-18T20:54:47+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"AAPL","i":7112,"x":"V","p":211.075,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:54:47.322958023Z"},{"T":"t","S":"AAPL","i":7113,"x":"V","p":211.07,"s":7,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:47.323873046Z"}],"time":"2025-07-18T20:54:47+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8954,"x":"V","p":185.01,"s":10,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:47.602617934Z"}],"time":"2025-07-18T20:54:47+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8955,"x":"V","p":184.99,"s":2,"c":["@","I"],"z":"C","t":"2025-07-18T17:54:57.709950905Z"}],"time":"2025-07-18T20:54:57+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"GOOGL","i":8956,"x":"V","p":184.99,"s":100,"c":["@"],"z":"C","t":"2025-07-18T17:55:00.079321449Z"}],"time":"2025-07-18T20:55:00+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"t","S":"TSLA","i":8782,"x":"V","p":327.87,"s":49,"c":["@","I"],"z":"C","t":"2025-07-18T17:55:00.60774557Z"}],"time":"2025-07-18T20:55:00+03:00","message":"Checking response from server"}
+{"level":"info","time":"2025-07-19T20:18:14+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:18:14+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:18:14+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets/v2"}
+{"level":"info","time":"2025-07-19T20:18:14+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://paper-api.streamers.markets/stream","time":"2025-07-19T20:18:14+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"error","error":"dial tcp: lookup paper-api.streamers.markets: no such host","time":"2025-07-19T20:18:15+03:00","message":"Failed to establish WebSocket connection"}
+{"level":"fatal","error":"dial tcp: lookup paper-api.streamers.markets: no such host","time":"2025-07-19T20:18:15+03:00","message":"Failed to connect to Alpaca WebSocket"}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:18:43+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:18:43+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T20:18:43+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T20:18:43+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T20:18:43+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:18:43+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:18:44+03:00","message":"Checking response from server"}
+{"level":"info","payload":"","time":"2025-07-19T20:19:38+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:19:38+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-19T20:20:32+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:20:32+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-19T20:21:26+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:21:26+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-19T20:22:20+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:22:20+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-19T20:23:14+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:23:14+03:00","message":"Pong sent"}
+{"level":"info","time":"2025-07-19T20:23:38+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:23:38+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:23:38+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:23:38+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:23:38+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:23:38+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:23:38+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:23:38+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"error","code":406,"msg":"connection limit exceeded"}],"time":"2025-07-19T20:23:39+03:00","message":"Checking response from server"}
+{"level":"error","error":"received error from streamers: [{\"T\":\"error\",\"code\":406,\"msg\":\"connection limit exceeded\"}]","time":"2025-07-19T20:23:39+03:00","message":"Did not receive authentication confirmation"}
+{"level":"fatal","error":"received error from streamers: [{\"T\":\"error\",\"code\":406,\"msg\":\"connection limit exceeded\"}]","time":"2025-07-19T20:23:39+03:00","message":"Failed to connect to Alpaca WebSocket"}
+{"level":"info","time":"2025-07-19T20:24:32+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:24:32+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:24:32+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:24:32+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:24:32+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:24:32+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:24:32+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:24:32+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T20:24:33+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T20:24:33+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T20:24:33+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:24:33+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:24:33+03:00","message":"Checking response from server"}
+{"level":"info","payload":"","time":"2025-07-19T20:25:27+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:25:27+03:00","message":"Pong sent"}
+{"level":"info","time":"2025-07-19T20:26:54+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:26:54+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:26:54+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:26:54+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:26:54+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:26:55+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:26:55+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:26:55+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T20:26:55+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T20:26:55+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T20:26:55+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:26:55+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:26:55+03:00","message":"Checking response from server"}
+{"level":"info","time":"2025-07-19T20:45:12+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:45:12+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:45:12+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:45:12+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:45:12+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:45:13+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:45:13+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:45:13+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T20:45:13+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T20:45:13+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T20:45:13+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:45:13+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:45:13+03:00","message":"Checking response from server"}
+{"level":"info","time":"2025-07-19T20:52:38+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:52:38+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:52:38+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:52:38+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:52:38+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:52:39+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:52:39+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:52:39+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T20:52:39+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T20:52:39+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T20:52:39+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:52:39+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:52:40+03:00","message":"Checking response from server"}
+{"level":"info","payload":"","time":"2025-07-19T20:53:34+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:53:34+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-19T20:54:28+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-19T20:54:28+03:00","message":"Pong sent"}
+{"level":"info","time":"2025-07-19T20:55:53+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:55:53+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:55:53+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:55:53+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v1beta1/crypto","time":"2025-07-19T20:55:53+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"error","error":"websocket: bad handshake","time":"2025-07-19T20:55:54+03:00","message":"Failed to establish WebSocket connection"}
+{"level":"fatal","error":"websocket: bad handshake","time":"2025-07-19T20:55:54+03:00","message":"Failed to connect to Alpaca WebSocket"}
+{"level":"info","time":"2025-07-19T20:57:25+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T20:57:25+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T20:57:25+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T20:57:25+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T20:57:25+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T20:57:28+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T20:57:28+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T20:57:28+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T20:57:28+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T20:57:28+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T20:57:28+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T20:57:28+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T20:57:28+03:00","message":"Checking response from server"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-19T21:29:21+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-19T21:29:21+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-19T21:29:21+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-19T21:29:21+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-19T21:29:21+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-19T21:29:21+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-19T21:29:21+03:00","message":"Checking response from server"}
+{"level":"info","time":"2025-07-20T09:53:22+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-20T09:53:22+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-20T09:53:22+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-20T09:53:22+03:00","message":"Service started successfully"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-20T09:53:22+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-20T09:53:25+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-20T09:53:25+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-20T09:53:25+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-20T09:53:25+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-20T09:53:25+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-20T09:53:25+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-20T09:53:25+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-20T09:53:25+03:00","message":"Checking response from server"}
+{"level":"info","payload":"","time":"2025-07-20T09:54:19+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T09:54:19+03:00","message":"Pong sent"}
+{"level":"fatal","error":"failed to ping postgres: failed to connect to `user=postgres database=signal_flow`:\n\t[::1]:5432 (localhost): tls error: server refused TLS connection\n\t127.0.0.1:5432 (localhost): tls error: server refused TLS connection\n\t[::1]:5432 (localhost): failed SASL auth: FATAL: password authentication failed for user \"postgres\" (SQLSTATE 28P01)","time":"2025-07-20T10:43:20+03:00","message":"Failed to initialize Postgres repository"}
+{"level":"fatal","error":"failed to ping postgres: failed to connect to `user=postgres database=signal_flow`: [::1]:5432 (localhost): failed SASL auth: FATAL: password authentication failed for user \"postgres\" (SQLSTATE 28P01)","time":"2025-07-20T10:44:18+03:00","message":"Failed to initialize Postgres repository"}
+{"level":"info","time":"2025-07-20T10:50:57+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-20T10:50:57+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-20T10:50:57+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-20T10:50:57+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-20T10:50:57+03:00","message":"Postgres: &{pool:0x1400013a240}"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-20T10:50:57+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-20T10:50:58+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-20T10:50:58+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-20T10:50:58+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"success","msg":"authenticated"}],"time":"2025-07-20T10:50:58+03:00","message":"Checking response from server"}
+{"level":"info","expected":"authenticated","time":"2025-07-20T10:50:58+03:00","message":"Got expected response from server"}
+{"level":"info","time":"2025-07-20T10:50:58+03:00","message":"Successfully authenticated with Alpaca"}
+{"level":"info","symbols":["AAPL","GOOGL","TSLA"],"time":"2025-07-20T10:50:58+03:00","message":"Subscribing to trades"}
+{"level":"debug","response":[{"T":"subscription","trades":["AAPL","GOOGL","TSLA"],"corrections":["AAPL","GOOGL","TSLA"],"cancelErrors":["AAPL","GOOGL","TSLA"]}],"time":"2025-07-20T10:50:58+03:00","message":"Checking response from server"}
+{"level":"info","payload":"","time":"2025-07-20T10:51:52+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:51:52+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:52:46+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:52:46+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:53:40+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:53:40+03:00","message":"Pong sent"}
+{"level":"info","time":"2025-07-20T10:54:23+03:00","message":"Received shutdown signal, shutting down gracefully..."}
+{"level":"info","payload":"","time":"2025-07-20T10:54:34+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:54:34+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:55:28+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:55:28+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:56:22+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:56:22+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:57:16+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:57:16+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:58:10+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:58:10+03:00","message":"Pong sent"}
+{"level":"info","payload":"","time":"2025-07-20T10:59:04+03:00","message":"Ping received"}
+{"level":"info","time":"2025-07-20T10:59:04+03:00","message":"Pong sent"}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"Logger initialized successfully"}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"Starting sf-ingestor service..."}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"Alpaca Base URL: https://paper-api.alpaca.markets"}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"Service started successfully"}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"Postgres: &{pool:0x140001ae240}"}
+{"level":"info","url":"wss://stream.data.alpaca.markets/v2/iex","time":"2025-07-20T10:59:21+03:00","message":"Connecting to Alpaca WebSocket..."}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"WebSocket connection established"}
+{"level":"info","time":"2025-07-20T10:59:21+03:00","message":"Sending authentication request..."}
+{"level":"debug","response":[{"T":"success","msg":"connected"}],"time":"2025-07-20T10:59:21+03:00","message":"Checking response from server"}
+{"level":"debug","response":[{"T":"error","code":406,"msg":"connection limit exceeded"}],"time":"2025-07-20T10:59:22+03:00","message":"Checking response from server"}
+{"level":"error","error":"received error from streamers: [{\"T\":\"error\",\"code\":406,\"msg\":\"connection limit exceeded\"}]","time":"2025-07-20T10:59:22+03:00","message":"Did not receive authentication confirmation"}
+{"level":"fatal","error":"received error from streamers: [{\"T\":\"error\",\"code\":406,\"msg\":\"connection limit exceeded\"}]","time":"2025-07-20T10:59:22+03:00","message":"Failed to connect to Alpaca WebSocket"}

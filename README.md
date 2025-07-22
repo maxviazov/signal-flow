@@ -1,205 +1,116 @@
-# SignalFlow
+[![Go Version](https://img.shields.io/badge/go-1.21+-brightgreen)](https://golang.org/)
+[![License](https://img.shields.io/github/license/maxviazov/signal-flow)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/maxviazov/signal-flow)](https://github.com/maxviazov/signal-flow/commits/main)
+[![Issues](https://img.shields.io/github/issues/maxviazov/signal-flow)](https://github.com/maxviazov/signal-flow/issues)
+[![Stars](https://img.shields.io/github/stars/maxviazov/signal-flow?style=social)](https://github.com/maxviazov/signal-flow/stargazers)
 
-Real-time market data ingestion service for financial data analysis and trading applications.
+# 📡 signal-flow
 
-## Table of Contents
+**signal-flow** is a personal project I'm building to experiment with streaming market data in real time using Go, Alpaca WebSocket API, and PostgreSQL.
 
-- [About The Project](#about-the-project)
-- [Current Implementation](#current-implementation)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Development](#development)
-- [Roadmap](#roadmap)
-- [License](#license)
+The goal is to ingest live trade data, log it, and (soon) store and process it for analytics, AI-driven sentiment analysis, and potential signal generation.
 
-## About The Project
+> ⚠️ This project is a work-in-progress — but it already has a solid structure for scaling into a real-time data platform.
 
-SignalFlow is a backend system designed to ingest real-time market data from financial APIs. Currently, the project
-implements a robust market data ingestion service that connects to Alpaca's WebSocket API to stream live trade data.
+---
 
-This project serves as a foundation for building automated trading strategies, market monitoring tools, and financial
-data analysis applications. It demonstrates modern Go development practices with clean architecture, structured logging,
-and containerized deployment.
+## 💡 What it does (right now)
 
-## Current Implementation
+- Connects to Alpaca’s WebSocket (v2/iex)
+- Authenticates with API key + secret (via `.env` or config)
+- Subscribes to trades for selected tickers (like AAPL, GOOGL, TSLA)
+- Receives and logs raw JSON market data using `zerolog`
+- Handles shutdown gracefully (`SIGINT`, `SIGTERM`)
+- Uses `pgxpool` for PostgreSQL connection management (writing coming next!)
+- All configuration is powered by `Viper`
 
-The project currently consists of:
+---
 
-**`sf-ingestor`** - A Go service that:
+## 🧱 Tech stack
 
-- Connects to Alpaca's WebSocket API for real-time market data
-- Authenticates using API key/secret credentials
-- Subscribes to trade updates for specified symbols (AAPL, GOOGL, TSLA)
-- Provides structured logging with both console and file output
-- Handles WebSocket connection management with ping/pong and reconnection logic
-- Supports flexible configuration via YAML files and environment variables
+| What | Why |
+|------|-----|
+| Go | Fast, typed, great for stream processing |
+| WebSocket | Real-time data from Alpaca |
+| PostgreSQL | For storing structured trade data |
+| Zerolog | Minimalistic, structured logging |
+| Viper | Flexible config loading (yaml + env) |
+| Docker Compose | Local dev with Postgres (coming soon) |
 
-## Tech Stack
+---
 
-- **Language**: Go 1.24.5
-- **WebSocket Client**: Gorilla WebSocket
-- **Logging**: Zerolog (structured logging)
-- **Configuration**: Viper (YAML + environment variables)
-- **Validation**: Go Playground Validator
-- **Database**: TimescaleDB (PostgreSQL extension for time-series data)
-- **Containerization**: Docker & Docker Compose
-- **Build Tool**: Make
-- **Code Quality**: golangci-lint
+## 🧰 Project structure
 
-## Getting Started
+```bash
+.
+├── cmd/sf-ingestor      # App entrypoint
+├── internal/
+│   ├── config           # Viper config
+│   ├── client/streamers # Alpaca WebSocket client
+│   └── repository/      # Postgres connection
+├── pkg/logger           # Custom zerolog wrapper
+├── config.yaml.example  # Config template
+├── logs/                # App logs
+└── test/                # Unit tests (loggers, utils)
+```
 
-### Prerequisites
+---
 
-- Go 1.24.5 or later
-- Docker & Docker Compose
-- `make` utility
-- Alpaca API credentials (free paper trading account)
+## 🚀 Run it locally
 
-### Installation
+1. Clone the repo
+2. Create `.env` or copy and fill `config.yaml.example`
+3. Run the app:
 
-1. Clone the repository
-   ```sh
-   git clone https://github.com/maxviazov/signal-flow.git
-   cd signal-flow
-   ```
+```bash
+go run ./cmd/sf-ingestor
+```
 
-2. Set up environment variables
-   ```sh
-   cp .env.example .env
-   # Edit .env with your Alpaca API credentials
-   ```
+Coming soon: `docker-compose` for local PostgreSQL + API
 
-3. Start the database
-   ```sh
-   docker-compose up -d postgres
-   ```
+---
 
-4. Run the application
-   ```sh
-   make run
-   ```
-
-## Configuration
-
-The application supports configuration through both YAML files and environment variables.
-
-### Configuration File (config.yaml)
+## 🧪 Sample config
 
 ```yaml
-alpaca:
+streamers:
   base_url: "https://paper-api.alpaca.markets"
-  stream_url: "wss://stream.data.streamers.markets/v2/iex"
+  stream_url: "wss://stream.data.alpaca.markets/v2/iex"
+  api_key: "${ALPACA_API_KEY}"
+  api_secret: "${ALPACA_API_SECRET}"
 
 log:
   level_console: "info"
   level_file: "debug"
+
+postgres:
+  postgres_host: "localhost"
+  postgres_port: 5432
+  postgres_user: "${POSTGRES_USER}"
+  postgres_password: "${POSTGRES_PASSWORD}"
+  postgres_db: "signal_flow"
 ```
-
-### Environment Variables
-
-Create a `.env` file with your Alpaca credentials:
-
-```env
-ALPACA_API_KEY=your_api_key_here
-ALPACA_API_SECRET=your_api_secret_here
-POSTGRES_USER=signalflow
-POSTGRES_PASSWORD=your_password_here
-POSTGRES_DB=signalflow
-```
-
-### Configuration Options
-
-- **alpaca.base_url**: Alpaca API base URL (defaults to paper trading)
-- **alpaca.stream_url**: WebSocket stream URL for market data
-- **alpaca.api_key**: Your Alpaca API key (set via environment variable)
-- **alpaca.api_secret**: Your Alpaca API secret (set via environment variable)
-- **log.level_console**: Console log level (debug, info, warn, error, fatal, panic)
-- **log.level_file**: File log level (debug, info, warn, error, fatal, panic)
-
-## Usage
-
-### Running the Service
-
-```sh
-# Run with make (loads .env automatically)
-make run
-
-# Or run directly with Go
-go run ./cmd/sf-ingestor/main.go
-```
-
-### Logs
-
-The application creates logs in two places:
-
-- **Console**: Formatted output with timestamps
-- **File**: `logs/app.log` with detailed JSON-structured logs
-
-### Market Data
-
-The service currently subscribes to trade updates for:
-
-- AAPL (Apple Inc.)
-- GOOGL (Alphabet Inc.)
-- TSLA (Tesla Inc.)
-
-Trade data is logged in real-time and includes:
-
-- Symbol
-- Price
-- Size (volume)
-- Timestamp
-- Trade conditions
-
-## Development
-
-### Available Make Commands
-
-```sh
-make run     # Run the application with environment variables
-make clean   # Clean Go cache and remove binaries
-make lint    # Run golangci-lint for code quality checks
-```
-
-### Project Structure
-
-```
-.
-├── cmd/sf-ingestor/          # Application entry point
-├── internal/
-│   ├── client/alpaca/        # Alpaca WebSocket client
-│   └── config/               # Configuration management
-├── pkg/logger/               # Logging utilities
-├── config.yaml               # Configuration file
-├── docker-compose.yml        # Database setup
-└── Makefile                  # Build automation
-```
-
-### Code Quality
-
-The project uses golangci-lint for code quality checks. Run `make lint` to check your code before committing.
-
-## Roadmap
-
-Future planned features:
-
-- [ ] **sf-calculator**: Technical indicators calculation service
-- [ ] **sf-news-analyzer**: News sentiment analysis with AI
-- [ ] **Database Integration**: Store market data in TimescaleDB
-- [ ] **Message Queue**: Implement Pub/Sub for service communication
-- [ ] **REST API**: HTTP endpoints for data access
-- [ ] **Cloud Deployment**: Deploy to Google Cloud Run
-- [ ] **CI/CD Pipeline**: GitHub Actions for automated testing and deployment
-- [ ] **Monitoring**: Metrics and health checks
-- [ ] **More Data Sources**: Support for additional market data providers
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-**Note**: This project is currently in active development. The sf-ingestor service is functional and ready for use,
-while additional services are planned for future releases.
+## 📌 Roadmap
+
+- [x] Connect to Alpaca WS and authenticate
+- [x] Subscribe to trades and log incoming data
+- [ ] Parse & store trade messages in Postgres
+- [ ] Stream processed data into downstream services (Kafka?)
+- [ ] Add sentiment analysis from news
+- [ ] Expose REST or gRPC API to consume signals
+- [ ] Dockerize + CI
+
+---
+
+## 👨‍💻 About me
+
+I'm [Max](https://github.com/maxviazov) — a backend developer from Israel passionate about real-time systems, clean Go code, and data processing.  
+Feel free to reach out, open issues, or suggest features 🙌
+
+---
+
+> Built with ☕ and way too many logging statements.  
+> Stay tuned!
